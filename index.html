@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Simple Calculator</title>
+    <style>
+        .calculator {
+            width: 400px;
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen bg-gradient-to-r from-slate-100 to-slate-400">
+
+    <div class="calculator bg-white shadow-2xl rounded-lg p-8 bg-gradient-to-r from-zinc-400 to-zinc-500">
+        <h1 class="text-center text-amber-300 text-2xl font-bold mb-4">Calculator</h1>
+
+        <input type="text" id="result" placeholder="0" class="w-full p-2   rounded mb-4 text-right" readonly>
+
+        <div class="grid grid-cols-4 gap-2">
+            <button onclick="displayContent('7')" id="seven" class="bg-gray-800 text-white p-4 rounded hover:bg-gray-950">7</button>
+            <button onclick="displayContent('8')" id="eight" class="bg-gray-800 text-white p-4 rounded hover:bg-gray-950">8</button>
+            <button onclick="displayContent('9')" id="nine" class="bg-gray-800 text-white p-4 rounded hover:bg-gray-950">9</button>
+            <button onclick="displayContent('/')" id="div" class="bg-gray-800 text-red-400 p-4 rounded hover:bg-gray-950">/</button>
+            
+            <button onclick="displayContent('4')" id="four" class="bg-gray-800 text-white p-4 rounded hover:bg-gray-950">4</button>
+            <button onclick="displayContent('5')" id="five" class="bg-gray-800 text-white p-4 rounded hover:bg-gray-950">5</button>
+            <button onclick="displayContent('6')" id="six" class="bg-gray-800 text-white p-4 rounded hover:bg-gray-950">6</button>
+            <button onclick="displayContent('*')" id="mul" class="bg-gray-800 text-red-400 p-4 rounded hover:bg-gray-950">x</button>
+            
+            <button onclick="displayContent('1')" id="one" class="bg-gray-800 text-white p-4 rounded hover:bg-gray-950">1</button>
+            <button onclick="displayContent('2')" id="two" class="bg-gray-800 text-white p-4 rounded hover:bg-gray-950">2</button>
+            <button onclick="displayContent('3')" id="three" class="bg-gray-800 text-white p-4 rounded hover:bg-gray-950">3</button>
+            <button onclick="displayContent('-')" id="sub" class="bg-gray-800 text-red-400 p-4 rounded hover:bg-gray-950">-</button>
+            
+            <button onclick="displayContent('0')" id="zero" class="bg-gray-800 text-white p-4 rounded hover:bg-gray-950">0</button>
+            <button onclick="calcOutput()" id="equal" class="bg-gray-800 text-green-400 p-4 rounded hover:bg-gray-950">=</button>
+            <button onclick="screenClear()"  id="clear" class="bg-gray-800 text-amber-500 p-4 rounded hover:bg-gray-950">C</button>
+            <button onclick="displayContent('+')" id="add" class="bg-gray-800 text-red-400 p-4 rounded hover:bg-gray-950">+</button>
+
+            <button onclick="removeLastDigit()" id="del" class="bg-gray-800 text-red-400 p-4 rounded hover:bg-gray-950">&#9003</button>
+
+        </div>
+    </div>
+</body>
+<script src="./main.js "></script>
+</html>
